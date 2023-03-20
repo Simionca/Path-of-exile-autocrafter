@@ -12,6 +12,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { RegistrationComponent } from './registration/registration.component';
+import { FirestoreModule } from '@angular/fire/firestore';
+import { firebaseConfig } from './firebase-config';
+import { AngularFireModule} from '@angular/fire/compat'
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +25,7 @@ import { RegistrationComponent } from './registration/registration.component';
     RegistrationComponent
   ],
   imports: [
+    
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -27,7 +34,9 @@ import { RegistrationComponent } from './registration/registration.component';
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    AngularFireModule.initializeApp(firebaseConfig)
+  
   ],
   providers: [],
   bootstrap: [AppComponent]
