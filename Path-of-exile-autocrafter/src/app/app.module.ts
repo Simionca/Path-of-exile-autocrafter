@@ -11,18 +11,17 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { RegistrationComponent } from './registration/registration.component';
-import { FirestoreModule } from '@angular/fire/firestore';
+//import { FirestoreModule } from '@angular/fire/firestore';
 import { firebaseConfig } from './firebase-config';
 import { AngularFireModule} from '@angular/fire/compat'
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+//import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+//import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    RegistrationComponent
+    
   ],
   imports: [
     

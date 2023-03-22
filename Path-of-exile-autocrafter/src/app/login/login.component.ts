@@ -1,10 +1,13 @@
-
 import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { getAuth, GoogleAuthProvider } from 'firebase/auth';
+import { Auth } from 'firebase/auth';
+import app from '../../main';
+import 'firebase/auth';
 
-const auth = getAuth();
+const auth: Auth = getAuth(app);
 const provider = new GoogleAuthProvider();
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,13 +19,20 @@ export class LoginComponent {
   setFormMode(mode: string) {
     this.formMode = mode;
   }
-  constructor(public auth: AngularFireAuth) {}
 
   signInWithGoogle() {
-    this.auth.signInWithPopup(provider);
+    this.auth.signInWithRedirect(provider);
   }
 
   signOut() {
-    this.auth.signOut();
+    this.auth.signOut()
+      .then(() => {
+        console.log('Signed out successfully');
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }
+
+  constructor(public auth: AngularFireAuth) {}
 }
