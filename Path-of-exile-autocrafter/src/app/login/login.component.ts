@@ -5,7 +5,7 @@ import { Auth } from 'firebase/auth';
 import app from '../../main';
 import 'firebase/auth';
 
-const auth: Auth = getAuth(app);
+const firebaseAuth: Auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 @Component({
@@ -21,11 +21,18 @@ export class LoginComponent {
   }
 
   signInWithGoogle() {
-    this.auth.signInWithRedirect(provider);
+    this.auth.signInWithPopup(provider)
+      .then((result) => {
+        // Handle successful sign-in
+      })
+      .catch((error) => {
+        // Handle sign-in error
+      });
   }
+  
 
   signOut() {
-    this.auth.signOut()
+    firebaseAuth.signOut()
       .then(() => {
         console.log('Signed out successfully');
       })
