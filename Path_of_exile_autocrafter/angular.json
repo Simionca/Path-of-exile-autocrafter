@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Path-of-exile-autocrafter": {
+    "Path_of_exile_autocrafter": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -25,7 +25,6 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -61,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Path-of-exile-autocrafter:build:production"
+              "browserTarget": "Path_of_exile_autocrafter:build:production"
             },
             "development": {
-              "browserTarget": "Path-of-exile-autocrafter:build:development"
+              "browserTarget": "Path_of_exile_autocrafter:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Path-of-exile-autocrafter:build"
+            "browserTarget": "Path_of_exile_autocrafter:build"
           }
         },
         "test": {
@@ -88,7 +87,6 @@
               "src/assets"
             ],
             "styles": [
-              "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -98,6 +96,6 @@
     }
   },
   "cli": {
-    "analytics": "cd933f4f-cff9-46d7-b2c8-a6bd120ba777"
+    "analytics": "479ba3d0-3abc-49d0-b3c9-6893c116ed43"
   }
 }

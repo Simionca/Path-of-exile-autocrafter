@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Path-of-exile-autocrafter';
+  title = 'Path_of_exile_autocrafter';
 }
- 
