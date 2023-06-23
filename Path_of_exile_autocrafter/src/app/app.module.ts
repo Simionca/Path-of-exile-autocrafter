@@ -7,18 +7,21 @@ import { LoginComponent } from './login/login.component';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 
-import { ReactiveFormsModule } from '@angular/forms'; // Add this import
-
+import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component'; // Add this import
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     provideFirebaseApp(() =>
       initializeApp({
         apiKey: "AIzaSyAKmjRzP6NdwsCy0FTzJou3fMIh1E_1NS0",
